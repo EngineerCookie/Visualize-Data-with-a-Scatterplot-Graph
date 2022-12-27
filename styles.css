@@ -38,6 +38,8 @@ body {
     justify-content: center;
 }
 
+
+
 .canvas {
     background-color: var(--color-container);
     width: 950px;
@@ -90,8 +92,23 @@ body {
     padding: 10px 15px;
     font-size: var(--fs-normal);
     border-radius: 5px;   
+    display: none;
+}
+
+#tooltip.show {
+    display: block;
 }
 
 .attribution > *{
     color: black;
+}
+
+@media (max-width: 950px) {
+    body {
+        display: block;
+    }
+
+    .attribution {
+        text-align: center;
+    }
 }

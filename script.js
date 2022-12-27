@@ -72,6 +72,7 @@ svg.selectAll('circle')
     .attr('cy', (d) => yScale((d.Seconds * 1000)))
     .on('mouseover', function (d, info) { //tooltips
         tooltip.attr('data-year', info.Year);
+        tooltip.attr('class', 'show')
         tooltip.transition()
             .duration(200)
             .style('opacity', 0.9)
@@ -80,6 +81,7 @@ svg.selectAll('circle')
             .style('left', `${d.pageX + 20}px`)
     })
     .on('mouseout', function (d) {
+        tooltip.attr('class', '');
         tooltip.transition()
             .duration(500)
             .style('opacity', 0)
